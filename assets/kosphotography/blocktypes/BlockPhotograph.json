@@ -1,0 +1,24 @@
+﻿{
+  "code": "photographblock",
+  "class": "BlockPhotograph",
+  "entityClass": "BlockEntityPhotograph",
+  "creativeinventory": { "general": [ "*" ] },
+  "blockmaterial": "Stone",
+  "drawtype": "json",
+  "shape": { "base": "kosphotography:block/photoblock" },
+  "textures": {
+    "iron1": { "base": "game:block/metal/sheet/iron1" },
+    "alambic_rond": { "base": "lavoisier:block/alembic/alembic_round" }
+  },
+  "resistance": 3.5,
+  "sounds": {
+    "place": "game:block/anvil",
+    "walk": "game:walk/stone"
+  },
+  "sidesolid": {
+    "all": "false"
+  },
+  "sideopaque": {
+    "all": "false"
+  }
+}

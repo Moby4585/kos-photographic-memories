@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "kosphotography",
+  "name": "Kingdom of Science: Photographic Memories",
+  "authors": ["Moby_"],
+  "description": "To be added",
+  "version": "1.0.0",
+  "dependencies": {
+    "game": ""
+  }
+}
