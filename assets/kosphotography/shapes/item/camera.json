@@ -1,0 +1,158 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"stainlesssteel1": "game:block/metal/sheet/stainlesssteel1",
+		"blue": "game:block/glass/blue",
+		"oak": "game:block/wood/debarked/oak",
+		"black": "game:block/black",
+		"tinbronze1": "game:block/metal/sheet/tinbronze1"
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [ 4.0, 0.0, 3.0 ], 
+			"to": [ 12.0, 8.0, 5.0 ], 
+			"rotationOrigin": [ 4.0, 0.0, 3.0 ],
+			"faces": {
+				"north": { "texture": "#oak", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+				"east": { "texture": "#oak", "uv": [ 0.0, 0.0, 2.0, 8.0 ] },
+				"south": { "texture": "#oak", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+				"west": { "texture": "#oak", "uv": [ 0.0, 0.0, 2.0, 8.0 ] },
+				"up": { "texture": "#oak", "uv": [ 0.0, 0.0, 8.0, 2.0 ] },
+				"down": { "texture": "#oak", "uv": [ 0.0, 0.0, 8.0, 2.0 ] }
+			}
+		},
+		{
+			"name": "Cube2",
+			"from": [ 5.0, 1.0, 5.0 ], 
+			"to": [ 11.0, 7.0, 7.0 ], 
+			"rotationOrigin": [ 5.0, 1.0, 5.0 ],
+			"faces": {
+				"north": { "texture": "#black", "uv": [ 0.0, 0.0, 6.0, 6.0 ] },
+				"east": { "texture": "#black", "uv": [ 0.0, 0.0, 2.0, 6.0 ] },
+				"south": { "texture": "#black", "uv": [ 0.0, 0.0, 6.0, 6.0 ] },
+				"west": { "texture": "#black", "uv": [ 0.0, 0.0, 2.0, 6.0 ] },
+				"up": { "texture": "#black", "uv": [ 0.0, 0.0, 6.0, 2.0 ] },
+				"down": { "texture": "#black", "uv": [ 0.0, 0.0, 6.0, 2.0 ] }
+			}
+		},
+		{
+			"name": "Cube3",
+			"from": [ 5.5, 1.5, 7.0 ], 
+			"to": [ 10.5, 6.5, 9.0 ], 
+			"rotationOrigin": [ 5.5, 1.5, 7.0 ],
+			"faces": {
+				"north": { "texture": "#black", "uv": [ 0.0, 0.0, 5.0, 5.0 ] },
+				"east": { "texture": "#black", "uv": [ 0.0, 0.0, 2.0, 5.0 ] },
+				"south": { "texture": "#black", "uv": [ 0.0, 0.0, 5.0, 5.0 ] },
+				"west": { "texture": "#black", "uv": [ 0.0, 0.0, 2.0, 5.0 ] },
+				"up": { "texture": "#black", "uv": [ 0.0, 0.0, 5.0, 2.0 ] },
+				"down": { "texture": "#black", "uv": [ 0.0, 0.0, 5.0, 2.0 ] }
+			}
+		},
+		{
+			"name": "Cube4",
+			"from": [ 6.0, 2.0, 9.0 ], 
+			"to": [ 10.0, 6.0, 11.0 ], 
+			"rotationOrigin": [ 6.0, 2.0, 9.0 ],
+			"faces": {
+				"north": { "texture": "#black", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
+				"east": { "texture": "#black", "uv": [ 0.0, 0.0, 2.0, 4.0 ] },
+				"south": { "texture": "#black", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
+				"west": { "texture": "#black", "uv": [ 0.0, 0.0, 2.0, 4.0 ] },
+				"up": { "texture": "#black", "uv": [ 0.0, 0.0, 4.0, 2.0 ] },
+				"down": { "texture": "#black", "uv": [ 0.0, 0.0, 4.0, 2.0 ] }
+			}
+		},
+		{
+			"name": "Cube5",
+			"from": [ 5.5, 0.0, 11.0 ], 
+			"to": [ 10.5, 6.5, 12.0 ], 
+			"rotationOrigin": [ 5.5, 0.0, 11.0 ],
+			"faces": {
+				"north": { "texture": "#oak", "uv": [ 0.0, 0.0, 5.0, 6.5 ] },
+				"east": { "texture": "#oak", "uv": [ 0.0, 0.0, 1.0, 6.5 ] },
+				"south": { "texture": "#oak", "uv": [ 0.0, 0.0, 5.0, 6.5 ] },
+				"west": { "texture": "#oak", "uv": [ 0.0, 0.0, 1.0, 6.5 ] },
+				"up": { "texture": "#oak", "uv": [ 0.0, 0.0, 5.0, 1.0 ] },
+				"down": { "texture": "#oak", "uv": [ 0.0, 0.0, 5.0, 1.0 ] }
+			}
+		},
+		{
+			"name": "Cube6",
+			"from": [ 7.0, 3.0, 12.0 ], 
+			"to": [ 9.0, 5.0, 13.0 ], 
+			"rotationOrigin": [ 7.0, 3.0, 12.0 ],
+			"faces": {
+				"north": { "texture": "#tinbronze1", "uv": [ 4.0, 5.5, 6.0, 7.5 ] },
+				"east": { "texture": "#tinbronze1", "uv": [ 15.0, 5.5, 16.0, 7.5 ] },
+				"south": { "texture": "#tinbronze1", "uv": [ 6.0, 3.5, 8.0, 5.5 ] },
+				"west": { "texture": "#tinbronze1", "uv": [ 0.0, 3.5, 1.0, 5.5 ] },
+				"up": { "texture": "#tinbronze1", "uv": [ 4.5, 0.0, 6.5, 1.0 ] },
+				"down": { "texture": "#tinbronze1", "uv": [ 3.5, 0.0, 5.5, 1.0 ] }
+			}
+		},
+		{
+			"name": "Cube7",
+			"from": [ 6.0, 0.0, 5.0 ], 
+			"to": [ 6.5, 0.5, 11.0 ], 
+			"rotationOrigin": [ 6.0, 0.0, 5.0 ],
+			"faces": {
+				"north": { "texture": "#stainlesssteel1", "uv": [ 6.5, 7.0, 7.0, 7.5 ] },
+				"east": { "texture": "#stainlesssteel1", "uv": [ 5.0, 8.5, 11.0, 9.0 ] },
+				"south": { "texture": "#stainlesssteel1", "uv": [ 5.0, 7.5, 5.5, 8.0 ] },
+				"west": { "texture": "#stainlesssteel1", "uv": [ 6.0, 9.0, 12.0, 9.5 ] },
+				"up": { "texture": "#stainlesssteel1", "uv": [ 8.0, 5.0, 8.5, 11.0 ] },
+				"down": { "texture": "#stainlesssteel1", "uv": [ 8.0, 3.5, 8.5, 9.5 ] }
+			}
+		},
+		{
+			"name": "Cube8",
+			"from": [ 9.5, 0.0, 5.0 ], 
+			"to": [ 10.0, 0.5, 11.0 ], 
+			"rotationOrigin": [ 9.5, 0.0, 5.0 ],
+			"faces": {
+				"north": { "texture": "#stainlesssteel1", "uv": [ 4.5, 5.0, 5.0, 5.5 ] },
+				"east": { "texture": "#stainlesssteel1", "uv": [ 3.5, 6.5, 9.5, 7.0 ] },
+				"south": { "texture": "#stainlesssteel1", "uv": [ 6.5, 4.5, 7.0, 5.0 ] },
+				"west": { "texture": "#stainlesssteel1", "uv": [ 5.0, 4.5, 11.0, 5.0 ] },
+				"up": { "texture": "#stainlesssteel1", "uv": [ 7.5, 3.5, 8.0, 9.5 ] },
+				"down": { "texture": "#stainlesssteel1", "uv": [ 7.0, 4.0, 7.5, 10.0 ] }
+			}
+		},
+		{
+			"name": "Cube9",
+			"from": [ 7.25, 3.25, 13.02 ], 
+			"to": [ 8.75, 4.75, 13.12 ], 
+			"rotationOrigin": [ 7.3, 3.0, 13.0 ],
+			"faces": {
+				"north": { "texture": "#blue", "uv": [ 6.0, 6.5, 7.5, 8.0 ] },
+				"east": { "texture": "#blue", "uv": [ 11.5, 6.0, 12.0, 7.5 ] },
+				"south": { "texture": "#blue", "uv": [ 7.0, 5.5, 8.5, 7.0 ] },
+				"west": { "texture": "#blue", "uv": [ 5.0, 4.5, 5.5, 6.0 ] },
+				"up": { "texture": "#blue", "uv": [ 5.0, 2.0, 6.5, 2.5 ] },
+				"down": { "texture": "#blue", "uv": [ 3.5, 2.0, 5.0, 2.5 ] }
+			}
+		},
+		{
+			"name": "Cube10",
+			"from": [ 7.3, 3.3, 12.01 ], 
+			"to": [ 8.7, 4.7, 13.01 ], 
+			"rotationOrigin": [ 7.3, 3.0, 12.0 ],
+			"faces": {
+				"north": { "texture": "#black", "uv": [ 6.0, 6.5, 7.0, 7.5 ] },
+				"east": { "texture": "#black", "uv": [ 11.5, 6.0, 12.5, 7.0 ] },
+				"south": { "texture": "#black", "uv": [ 7.0, 5.5, 8.0, 6.5 ] },
+				"west": { "texture": "#black", "uv": [ 5.0, 4.5, 6.0, 5.5 ] },
+				"up": { "texture": "#black", "uv": [ 5.0, 2.0, 6.0, 3.0 ] },
+				"down": { "texture": "#black", "uv": [ 3.5, 2.0, 4.5, 3.0 ] }
+			}
+		}
+	]}

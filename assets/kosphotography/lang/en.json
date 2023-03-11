@@ -1,0 +1,17 @@
+{
+  "item-camera": "Camera",
+
+  "item-photograph": "Photograph",
+  "incontainer-item-photograph": "Photograph",
+  "game:incontainer-item-photograph": "Photograph",
+
+  "item-photographicpaper": "Photographic paper",
+  "incontainer-item-photographicpaper": "Photographic paper",
+  "game:incontainer-item-photographicpaper": "Photographic paper",
+
+  "item-saltedpaper": "Salted paper",
+  "incontainer-item-saltedpaper": "Photographic paper",
+  "game:incontainer-item-saltedpaper": "Photographic paper",
+
+  "game:heldhelp-takephoto": "Take photograph"
+}

@@ -16,7 +16,7 @@ using System.Drawing;
 
 namespace kosphotography
 {
-    class PhotoBitmap : IBitmap
+    public class PhotoBitmap : IBitmap
     {
         int width = 255;
         int height = 255;
@@ -44,7 +44,7 @@ namespace kosphotography
             int colGreen = (int)(((float)col.R) * 0.349f + ((float)col.G) * 0.686f + ((float)col.B) * 0.168f);
             int colBlue = (int)(((float)col.R) * 0.272f + ((float)col.G) * 0.534f + ((float)col.B) * 0.131f);*/
 
-            int color = GameMath.LerpRgbaColor(((float)col.R) / 255f, Color.FromArgb(35, 31, 26).ToArgb(), Color.FromArgb(254, 225, 181).ToArgb());
+            int color = GameMath.LerpRgbaColor(Math.Min(((float)col.R) * 4f, 255f) / 255f, Color.FromArgb(35, 31, 26).ToArgb(), Color.FromArgb(254, 225, 181).ToArgb());
 
             //return Color.FromArgb(Math.Min(colRed, 255), Math.Min(colGreen, 255), Math.Min(colBlue, 255));
             return Color.FromArgb(color);
@@ -92,7 +92,9 @@ namespace kosphotography
                 {
                     for (int x = 0; x < height; x++)
                     {
-                        pixelsByte.Add((byte)(bmp.GetPixel(x + deadshift, y).B * (byte)2));
+                        //pixelsByte.Add((byte)(Math.Max (bmp.GetPixel(x + deadshift, y).B * (byte)2, 1)));
+                        pixelsByte.Add((byte)(bmp.GetPixel(x + deadshift, y).B / (byte)2));
+                        // Math.Min prevents the 0x00 value, which will be interpreted as End of String (bandaid-fix for how the byte[] item attribute doesn't works)
                     }
                 }
             }

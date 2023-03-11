@@ -35,6 +35,9 @@
     <Reference Include="OpenTK">
       <HintPath>C:\Users\llama\AppData\Roaming\Vintagestory\Lib\OpenTK.dll</HintPath>
     </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>C:\Users\llama\AppData\Roaming\Vintagestory\Lib\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -66,23 +69,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\kosphotography\textures\item\photograph.png" />
+    <Content Include="assets\kosphotography\textures\item\photographicpaper.png" />
+    <Content Include="assets\kosphotography\textures\item\saltedpaper.png" />
     <Content Include="modinfo.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\BlockEntity\BlockEntityPhotograph.cs" />
     <Compile Include="src\Block\BlockPhotograph.cs" />
+    <Compile Include="src\Item\ItemCamera.cs" />
+    <Compile Include="src\Item\ItemPhotograph.cs" />
     <Compile Include="src\KosPhotographyMod.cs" />
+    <Compile Include="src\Util\ModSystemPhotograph.cs" />
     <Compile Include="src\Util\PhotoBitmap.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\kosphotography\itemtypes\" />
-    <Folder Include="src\Item\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="assets\kosphotography\blocktypes\PhotoTest.json" />
     <None Include="assets\kosphotography\blocktypes\BlockPhotograph.json" />
+    <None Include="assets\kosphotography\itemtypes\camera.json" />
+    <None Include="assets\kosphotography\itemtypes\saltedpaper.json" />
+    <None Include="assets\kosphotography\itemtypes\photographicpaper.json" />
+    <None Include="assets\kosphotography\itemtypes\photograph.json" />
+    <None Include="assets\kosphotography\lang\en.json" />
     <None Include="assets\kosphotography\shapes\block\photo.json" />
     <None Include="assets\kosphotography\shapes\block\photoblock.json" />
+    <None Include="assets\kosphotography\shapes\item\camera.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

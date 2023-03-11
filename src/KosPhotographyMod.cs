@@ -31,6 +31,9 @@ namespace kosphotography
             api.RegisterBlockClass("BlockPhotograph", typeof(BlockPhotograph));
             api.RegisterBlockEntityClass("BlockEntityPhotograph", typeof(BlockEntityPhotograph));
 
+            api.RegisterItemClass("ItemPhotograph", typeof(ItemPhotograph));
+            api.RegisterItemClass("ItemCamera", typeof(ItemCamera));
+
             //api.RegisterMountable("vehicle", EntityVehicleSeat.GetMountable);
             //api.RegisterItemClass("ItemBoat", typeof(ItemBoat));
             //api.RegisterEntity("EntityVehicle", typeof(EntityVehicle));
