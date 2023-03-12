@@ -14,12 +14,18 @@ using Vintagestory.API.Datastructures;
 
 namespace kosphotography
 {
-    public class BlockPhotograph : Block
+    public class BlockPhotograph : BlockContainer
     {
 
         //public override bool AllowHeldLiquidTransfer => true;
 
         //public AssetLocation bubbleSound = new AssetLocation("game", "effect/bubbling");
+
+        public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos)
+        {
+            ItemStack pickedItemstack = base.OnPickBlock(world, pos);
+            return new ItemStack(world.GetBlock(pickedItemstack.Collectible.Code), 1);
+        }
 
         public override void OnLoaded(ICoreAPI api)
         {
@@ -39,11 +45,6 @@ namespace kosphotography
             }
 
             return false;
-        }
-
-        public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos)
-        {
-            return new ItemStack(this, 1);
         }
 
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)

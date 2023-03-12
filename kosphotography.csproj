@@ -101,6 +101,7 @@
     <None Include="assets\kosphotography\lang\en.json" />
     <None Include="assets\kosphotography\recipes\barrel\saltedpaper.json" />
     <None Include="assets\kosphotography\recipes\barrel\silvernitrate.json" />
+    <None Include="assets\kosphotography\recipes\grid\frames.json" />
     <None Include="assets\kosphotography\recipes\grid\camera.json" />
     <None Include="assets\kosphotography\recipes\grid\photographicpaper.json" />
     <None Include="assets\kosphotography\shapes\block\photo.json" />

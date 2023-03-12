@@ -1,0 +1,65 @@
+﻿[
+  {
+    "ingredientPattern": "_S_,SLS,_S_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "L": {
+        "type": "block",
+        "code": "game:linen-*",
+        "quantity": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:plank-*"
+      }
+    },
+    "output": {
+      "type": "block",
+      "code": "kosphotography:photographframeborderless-north",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "_S_,SLS,_S_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "L": {
+        "type": "block",
+        "code": "game:linen-*",
+        "quantity": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      }
+    },
+    "output": {
+      "type": "block",
+      "code": "kosphotography:photographframepainting-north",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "SF",
+    "width": 2,
+    "height": 1,
+    "ingredients": {
+      "F": {
+        "type": "block",
+        "code": "kosphotography:photographframepainting-north",
+        "quantity": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      }
+    },
+    "output": {
+      "type": "block",
+      "code": "kosphotography:photographframestand-north",
+      "quantity": 1
+    }
+  }
+]
