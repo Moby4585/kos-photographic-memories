@@ -1,0 +1,29 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"oak": "game:block/wood/debarked/oak",
+		"normal1": "game:block/cloth/linen/normal1"
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [ 0.0, 0.0, 15.5 ], 
+			"to": [ 16.0, 16.0, 16.0 ], 
+			"rotationOrigin": [ 0.0, 0.0, 15.5 ],
+			"faces": {
+				"north": { "texture": "#normal1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"east": { "texture": "#oak", "uv": [ 4.5, 0.0, 5.0, 16.0 ], "autoUv": false },
+				"south": { "texture": "#oak", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"west": { "texture": "#oak", "uv": [ 6.5, 0.0, 7.0, 16.0 ], "autoUv": false },
+				"up": { "texture": "#oak", "uv": [ 0.0, 5.5, 16.0, 6.0 ], "autoUv": false },
+				"down": { "texture": "#oak", "uv": [ 0.0, 5.5, 16.0, 6.0 ], "autoUv": false }
+			}
+		}
+	]}

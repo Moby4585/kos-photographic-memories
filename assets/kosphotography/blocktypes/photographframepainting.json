@@ -1,0 +1,131 @@
+﻿{
+  "code": "photographframepainting",
+  "class": "BlockPhotograph",
+  "entityClass": "BlockEntityPhotograph",
+  "creativeinventory": { "general": [ "*-north" ] },
+  "blockmaterial": "Wood",
+  "drawtype": "json",
+  "shape": {
+    "base": "game:block/wood/painting1x1",
+    "rotateYByType": {
+      "*-north": 180,
+      "*-east": 90,
+      "*-south": 0,
+      "*-west": 270
+    }
+  },
+  "attributes": {
+    "photoshape": "kosphotography:photopainting"
+  },
+  "faceCullMode": "NeverCull",
+  "behaviors": [
+    {
+      "name": "HorizontalAttachable"
+    }
+  ],
+  "textures": {
+    "painting": { "base": "game:block/cloth/linen/normal1" }
+  },
+  "variantgroups": [
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "resistance": 1.5,
+  "sounds": {
+    "place": "game:block/planks",
+    "break": "game:block/planks",
+    "hit": "game:block/planks"
+  },
+  "collisionbox": null,
+  "selectionbox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 1,
+    "z2": 0.0625,
+    "rotateYByType": {
+      "*-east": 270,
+      "*-south": 180,
+      "*-west": 90,
+      "*-north": 0
+    }
+  },
+  "lightAbsorption": 0,
+  "rainPermeable": true,
+  "sidesolid": {
+    "all": "false"
+  },
+  "sideopaque": {
+    "all": "false"
+  },
+
+  "guiTransform": {
+    "rotation": {
+      "x": -22.6,
+      "y": 25,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    },
+    "scale": 1.39
+  },
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rotation": {
+      "x": -90,
+      "y": 0,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 2.5
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1,
+      "y": -0.29,
+      "z": 0.05
+    },
+    "rotation": {
+      "x": 3,
+      "y": 12,
+      "z": -25
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    },
+    "scale": 0.6
+  },
+  "fpHandTransform": {
+    "translation": {
+      "x": 0,
+      "y": -0.05,
+      "z": 1.1
+    },
+    "rotation": {
+      "x": 0,
+      "y": -130,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    }
+  }
+}

@@ -37,9 +37,13 @@ namespace kosphotography
         public override string GetHeldItemName(ItemStack itemStack)
         {
             string itemName = base.GetHeldItemName(itemStack);
-            if (itemStack.Attributes.HasAttribute("width"))
+            /*if (itemStack.Attributes.HasAttribute("width"))
             {
                 itemName += " " + itemStack.Attributes.GetInt("width").ToString() + "x";
+            }*/
+            if (itemStack.Attributes.HasAttribute("photoname"))
+            {
+                itemName += " (" + itemStack.Attributes.GetString("photoname") + ")";
             }
             return itemName;
         }

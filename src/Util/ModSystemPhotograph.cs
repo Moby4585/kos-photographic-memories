@@ -86,6 +86,8 @@ namespace kosphotography
                 }
                 else
                 {
+                    api.World.PlaySoundAt(new AssetLocation("kosphotography", "sounds/shutter"), player.Entity, null, true, 16);
+
                     int takeOutAmount = player.InventoryManager.GetHotbarInventory()[10].TakeOut(1).StackSize;
                     if (takeOutAmount >= 1)
                     {

@@ -54,8 +54,15 @@ namespace kosphotography
 
             if (be != null)
             {
-                info += "\n" + be.imageArraySize.ToString();
-                info += be.desc;
+                //info += "\n" + be.imageArraySize.ToString();
+                //info += be.desc;
+                info = "";
+                if (!be.inventory[0].Empty)
+                {
+                    info = "Displaying: ";
+                    if (be.inventory[0].Itemstack.Attributes.HasAttribute("photoname")) info += be.inventory[0].Itemstack.Attributes.GetString("photoname");
+                    else info += "Photograph";
+                }
             }
 
             return info;

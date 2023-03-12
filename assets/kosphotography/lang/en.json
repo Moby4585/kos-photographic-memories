@@ -13,5 +13,14 @@
   "incontainer-item-saltedpaper": "Photographic paper",
   "game:incontainer-item-saltedpaper": "Photographic paper",
 
-  "game:heldhelp-takephoto": "Take photograph"
+  "game:heldhelp-takephoto": "Take photograph",
+
+  "block-photographframepainting-*": "Photograph frame",
+  "block-photographframestand-*": "Photograph frame (stand)",
+  "block-photographframeborderless-*": "Photograph frame (borderless)",
+
+  "item-silvernitrateportion": "Silver nitrate",
+  "incontainer-item-silvernitrateportion": "Silver nitrate",
+  "game:incontainer-item-silvernitrateportion": "Silver nitrate",
+  "itemdesc-silvernitrateportion": "AgNO<font size=\"10\">3</font>"
 }

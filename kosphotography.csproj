@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\kosphotography\sounds\shutter.ogg" />
     <Content Include="assets\kosphotography\textures\item\photograph.png" />
     <Content Include="assets\kosphotography\textures\item\photographicpaper.png" />
     <Content Include="assets\kosphotography\textures\item\saltedpaper.png" />
@@ -80,20 +81,34 @@
     <Compile Include="src\Item\ItemCamera.cs" />
     <Compile Include="src\Item\ItemPhotograph.cs" />
     <Compile Include="src\KosPhotographyMod.cs" />
+    <Compile Include="src\Util\CommandsSystem.cs" />
     <Compile Include="src\Util\ModSystemPhotograph.cs" />
     <Compile Include="src\Util\PhotoBitmap.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="assets\kosphotography\blocktypes\PhotoTest.json" />
-    <None Include="assets\kosphotography\blocktypes\BlockPhotograph.json" />
+    <None Include="assets\kosphotography\blocktypes\photographframestand.json" />
+    <None Include="assets\kosphotography\blocktypes\photostand.json" />
+    <None Include="assets\kosphotography\blocktypes\photographframeborderless.json" />
+    <None Include="assets\kosphotography\blocktypes\photopainting.json" />
+    <None Include="assets\kosphotography\blocktypes\photoborderless.json" />
+    <None Include="assets\kosphotography\blocktypes\photographframepainting.json" />
+    <None Include="assets\kosphotography\itemtypes\silvernitrate.json" />
     <None Include="assets\kosphotography\itemtypes\camera.json" />
     <None Include="assets\kosphotography\itemtypes\saltedpaper.json" />
     <None Include="assets\kosphotography\itemtypes\photographicpaper.json" />
     <None Include="assets\kosphotography\itemtypes\photograph.json" />
     <None Include="assets\kosphotography\lang\en.json" />
+    <None Include="assets\kosphotography\recipes\barrel\saltedpaper.json" />
+    <None Include="assets\kosphotography\recipes\barrel\silvernitrate.json" />
+    <None Include="assets\kosphotography\recipes\grid\camera.json" />
+    <None Include="assets\kosphotography\recipes\grid\photographicpaper.json" />
     <None Include="assets\kosphotography\shapes\block\photo.json" />
     <None Include="assets\kosphotography\shapes\block\photoblock.json" />
+    <None Include="assets\kosphotography\shapes\block\photoborderless.json" />
+    <None Include="assets\kosphotography\shapes\block\photopainting.json" />
+    <None Include="assets\kosphotography\shapes\block\standframe.json" />
+    <None Include="assets\kosphotography\shapes\block\photostand.json" />
     <None Include="assets\kosphotography\shapes\item\camera.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

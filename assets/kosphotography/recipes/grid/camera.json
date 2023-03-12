@@ -1,0 +1,34 @@
+﻿{
+  "ingredientPattern": "PNP,SLP,PTP",
+  "width": 3,
+  "height": 3,
+  "ingredients": {
+    "P": {
+      "type": "item",
+      "code": "game:plank-*",
+      "quantity": 2
+    },
+    "S": {
+      "type": "item",
+      "code": "chemistrylib:lens"
+    },
+    "N": {
+      "type": "item",
+      "code": "game:metalnailsandstrips-*"
+    },
+    "L": {
+      "type": "item",
+      "code": "game:leather-black"
+    },
+    "T": {
+      "type": "item",
+      "code": "game:stick",
+      "quantity": 2
+    }
+  },
+  "output": {
+    "type": "item",
+    "code": "kosphotography:camera",
+    "quantity": 1
+  }
+}

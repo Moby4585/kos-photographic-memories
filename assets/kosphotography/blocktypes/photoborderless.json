@@ -1,0 +1,31 @@
+﻿{
+  "code": "photoborderless",
+  "blockmaterial": "Stone",
+  "drawtype": "json",
+  "shape": {
+    "base": "kosphotography:block/photo",
+    "rotateYByType": {
+      "*-north": 0,
+      "*-east": 270,
+      "*-south": 180,
+      "*-west": 90
+    }
+  },
+  "variantgroups": [
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "resistance": 3.5,
+  "sounds": {
+    "place": "game:block/anvil",
+    "walk": "game:walk/stone"
+  },
+  "sidesolid": {
+    "all": "false"
+  },
+  "sideopaque": {
+    "all": "false"
+  }
+}

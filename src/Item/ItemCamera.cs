@@ -47,7 +47,13 @@ namespace kosphotography
 
                 if (api is ICoreClientAPI capi)
                 {
-                    capi.ShowChatMessage("photo client");
+                    if (!capi.HideGuis)
+                    {
+                        capi.ShowChatMessage("[Photography] Please hide GUIs (press F4) before taking a picture.");
+                        return;
+                    }
+
+                    capi.ShowChatMessage("[Photography] Photograph taken!");
 
                     if (player.InventoryManager.GetHotbarInventory()[10].Itemstack.Collectible.Code.ToString() == "kosphotography:photographicpaper")
                     {

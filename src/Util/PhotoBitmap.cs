@@ -44,7 +44,7 @@ namespace kosphotography
             int colGreen = (int)(((float)col.R) * 0.349f + ((float)col.G) * 0.686f + ((float)col.B) * 0.168f);
             int colBlue = (int)(((float)col.R) * 0.272f + ((float)col.G) * 0.534f + ((float)col.B) * 0.131f);*/
 
-            int color = GameMath.LerpRgbaColor(Math.Min(((float)col.R) * 4f, 255f) / 255f, Color.FromArgb(35, 31, 26).ToArgb(), Color.FromArgb(254, 225, 181).ToArgb());
+            int color = GameMath.LerpRgbaColor(Math.Min(((float)col.R) * 6f, 255f) / 255f, Color.FromArgb(35, 31, 26).ToArgb(), Color.FromArgb(254, 225, 181).ToArgb());
 
             //return Color.FromArgb(Math.Min(colRed, 255), Math.Min(colGreen, 255), Math.Min(colBlue, 255));
             return Color.FromArgb(color);

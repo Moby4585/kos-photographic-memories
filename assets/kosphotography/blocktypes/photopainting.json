@@ -1,0 +1,31 @@
+﻿{
+  "code": "photopainting",
+  "blockmaterial": "Stone",
+  "drawtype": "json",
+  "shape": {
+    "base": "kosphotography:block/photopainting",
+    "rotateYByType": {
+      "*-north": 180,
+      "*-east": 90,
+      "*-south": 0,
+      "*-west": 270
+    }
+  },
+  "variantgroups": [
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "resistance": 3.5,
+  "sounds": {
+    "place": "game:block/anvil",
+    "walk": "game:walk/stone"
+  },
+  "sidesolid": {
+    "all": "false"
+  },
+  "sideopaque": {
+    "all": "false"
+  }
+}

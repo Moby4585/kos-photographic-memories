@@ -1,0 +1,30 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "back",
+			"from": [ 4.0383, 1.0163, 9.6174 ], 
+			"to": [ 12.0383, 1.5163, 17.6174 ], 
+			"rotationOrigin": [ 4.0, 0.9239, 9.6174 ],
+			"rotationX": -112.5,
+			"rotationY": 90.0,
+			"rotationZ": -180.0,
+			"faces": {
+				"north": { "texture": "#normal1", "uv": [ 0.0, 0.0, 8.0, 0.5 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 8.0, 0.5 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 8.0, 0.5 ], "enabled": false },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 8.0, 0.5 ], "enabled": false },
+				"up": { "texture": "#normal1", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+				"down": { "texture": "#oak", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "enabled": false }
+			}
+		}
+	]}

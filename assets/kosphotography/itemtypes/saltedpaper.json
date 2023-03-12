@@ -1,5 +1,5 @@
 ﻿{
-  "code": "photographicpaper",
+  "code": "saltedpaper",
   "shape": { "base": "game:block/wood/crate/label-paper" },
   "attributes": {
     "displaycaseable": true,

@@ -41,7 +41,7 @@ namespace kosphotography
 
         bool isPhotoUpdated = false;
 
-        public static AssetLocation photoBlock = new AssetLocation("kosphotography", "phototest");
+        public AssetLocation photoBlock = new AssetLocation("kosphotography", "phototest");
         MeshData photoMesh;
 
         // Inventory : 0 - liquide, 1 - solide, 2 - lampe
@@ -55,6 +55,12 @@ namespace kosphotography
 
             //apparatusComposition = GetApparatusComposition();
             photoModSys = api.ModLoader.GetModSystem<ModSystemPhotograph>();
+
+
+            if (!inventory[0].Empty) isPhotoUpdated = true;
+
+            photoBlock = new AssetLocation((Block.Attributes?["photoshape"]?.AsString("kosphotography:photopainting") ?? "kosphotography:photopainting") + "-" + Block.LastCodePart());
+
 
             genPhoto();
             MarkDirty(true);
@@ -81,7 +87,7 @@ namespace kosphotography
 
         public void OnGameTick(float dt)
         {
-
+            
         }
 
         public override void GetBlockInfo(IPlayer forPlayer, StringBuilder dsc)

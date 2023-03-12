@@ -1,0 +1,42 @@
+﻿[
+  {
+    "code": "silvernitratebarrel",
+    "ingredients": [
+      {
+        "type": "item",
+        "code": "chemistrylib:mineralacidportion-nitric",
+        "litres": 0.1
+      },
+      {
+        "type": "item",
+        "code": "game:metalbit-silver",
+        "quantity": 1
+      }
+    ],
+    "output": {
+      "type": "item",
+      "code": "kosphotography:silvernitrateportion",
+      "litres": 0.1
+    }
+  },
+  {
+    "code": "silvernitratebarrelnative",
+    "ingredients": [
+      {
+        "type": "item",
+        "code": "chemistrylib:mineralacidportion-nitric",
+        "litres": 0.1
+      },
+      {
+        "type": "item",
+        "code": "game:nugget-nativesilver",
+        "quantity": 1
+      }
+    ],
+    "output": {
+      "type": "item",
+      "code": "kosphotography:silvernitrateportion",
+      "litres": 0.1
+    }
+  }
+]
