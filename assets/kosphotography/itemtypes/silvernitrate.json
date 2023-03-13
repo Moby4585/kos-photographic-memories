@@ -18,11 +18,11 @@
         "action": "DropContents",
         "stack": {
           "type": "item",
-          "code": "silvernitrateportion"
+          "code": "kosphotography:silvernitrateportion"
         }
       },
       "nutritionPropsPerLitre": {
-        "satiety": 0,
+        "satiety": -1,
         "health": 0,
         "foodcategory": "NoNutrition"
       }

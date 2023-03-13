@@ -47,5 +47,23 @@ namespace kosphotography
             }
             return itemName;
         }
+
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
+        {
+            base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling); 
+
+            if (blockSel == null)
+            {
+                IPlayer player = (byEntity as EntityPlayer).Player; ;
+
+                ITreeAttribute attributes = player.InventoryManager.ActiveHotbarSlot.Itemstack.Attributes;
+
+                if ((player.InventoryManager.GetHotbarInventory()[10].Itemstack?.Collectible.Code.ToString() ?? "") == "kosphotography:photographicpaper")
+                {
+                    photoModSys.takePhoto(player, Encoding.GetEncoding(28591).GetBytes(attributes.GetString("photo", "")), attributes.GetInt("width", 0), attributes.GetInt("height", 0));
+                }
+            }
+            
+        }
     }
 }

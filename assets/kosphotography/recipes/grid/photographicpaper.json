@@ -32,7 +32,7 @@
     }
   },
   {
-    "ingredientPattern": "NP",
+    "ingredientPattern": "PN",
     "ingredients": {
       "N": {
         "type": "block",
@@ -45,12 +45,12 @@
       }
     },
     "width": 2,
-    "height": ,
+    "height": 1,
     "attributes": {
       "liquidContainerProps": {
         "requiresContent": {
           "type": "item",
-          "code": "kosphotography:photographicpaper"
+          "code": "kosphotography:silvernitrateportion"
         },
         "requiresLitres": 0.1
       }

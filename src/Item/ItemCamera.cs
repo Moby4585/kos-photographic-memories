@@ -53,10 +53,10 @@ namespace kosphotography
                         return;
                     }
 
-                    capi.ShowChatMessage("[Photography] Photograph taken!");
-
-                    if (player.InventoryManager.GetHotbarInventory()[10].Itemstack.Collectible.Code.ToString() == "kosphotography:photographicpaper")
+                    if ((player.InventoryManager.GetHotbarInventory()[10].Itemstack?.Collectible.Code.ToString() ?? "") == "kosphotography:photographicpaper")
                     {
+
+                        capi.ShowChatMessage("[Photography] Photograph taken!");
 
                         PhotoBitmap bitmap = new PhotoBitmap();
 
