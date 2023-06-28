@@ -34,29 +34,45 @@ namespace kosphotography
             photoModSys = api.ModLoader.GetModSystem<ModSystemPhotograph>();
         }
 
-        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
+        public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
-            base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling);
+            base.OnHeldInteractStop(secondsUsed, slot, byEntity, blockSel, entitySel);
 
             IPlayer player = (byEntity as EntityPlayer).Player;
 
-            if (byEntity.Controls.Sneak) return;
+            if (player != null)
+            {
+                ShaderSysMod.didJustSnapped = true;
+            }
+            return;
+        }
+
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
+        {
+            //base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling);
+
+            IPlayer player = (byEntity as EntityPlayer).Player;
+
+            //if (byEntity.Controls.Sneak) return;
+
+            handling = EnumHandHandling.PreventDefault;
 
             if (player != null)
             {
 
                 if (api is ICoreClientAPI capi)
                 {
-                    if (!capi.HideGuis)
+                    /*if (!capi.HideGuis)
                     {
                         capi.ShowChatMessage("[Photography] Please hide GUIs (press F4) before taking a picture.");
                         return;
-                    }
+                    }*/
 
                     if ((player.InventoryManager.GetHotbarInventory()[10].Itemstack?.Collectible.Code.ToString() ?? "") == "kosphotography:photographicpaper")
                     {
 
                         capi.ShowChatMessage("[Photography] Photograph taken!");
+                        
 
                         PhotoBitmap bitmap = new PhotoBitmap();
 
@@ -66,7 +82,7 @@ namespace kosphotography
                         graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
                         graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
 
-                        bmp = new Bitmap(bmp, new Size(bmp.Width / (bmp.Height / 256), 256));
+                        bmp = new Bitmap(bmp, new Size(bmp.Width / (bmp.Height / (int)Math.Pow(2, KosPhotographyConfig.Current.PhotographLod)), (int)Math.Pow(2, KosPhotographyConfig.Current.PhotographLod)));
 
                         bitmap.setBitmap(bmp);
 
@@ -74,6 +90,8 @@ namespace kosphotography
                     }
                 }
             }
+
+            return;
         }
 
         public override WorldInteraction[] GetHeldInteractionHelp(ItemSlot inSlot)

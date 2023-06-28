@@ -123,6 +123,8 @@ namespace kosphotography
         {
 
             //reactingRecipe = JsonUtil.FromString<RetortRecipe>(tree.GetString("reactingRecipe", ""));
+            genPhoto();
+            MarkDirty(true);
 
             base.FromTreeAttributes(tree, worldAccessForResolve);
         }
@@ -136,7 +138,8 @@ namespace kosphotography
 
         private void genPhoto()
         {
-            if (Api.Side != EnumAppSide.Client) return;
+            if (Api == null) return;
+            if (Api?.Side != EnumAppSide.Client) return;
 
             if (inventory[0].Empty)
             {
@@ -154,7 +157,7 @@ namespace kosphotography
             //graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
             //graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
 
-            bmp = new Bitmap(bmp, new Size(bmp.Width / (bmp.Height / 256), 256));
+            bmp = new Bitmap(bmp, new Size(bmp.Width / (bmp.Height / (int)Math.Pow(2, KosPhotographyConfig.Current.PhotographLod)), (int)Math.Pow(2, KosPhotographyConfig.Current.PhotographLod)));
 
             bitmap.setBitmap(bmp);
 

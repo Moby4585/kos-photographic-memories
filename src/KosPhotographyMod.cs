@@ -34,6 +34,7 @@ namespace kosphotography
             api.RegisterItemClass("ItemPhotograph", typeof(ItemPhotograph));
             api.RegisterItemClass("ItemCamera", typeof(ItemCamera));
 
+
             //api.RegisterMountable("vehicle", EntityVehicleSeat.GetMountable);
             //api.RegisterItemClass("ItemBoat", typeof(ItemBoat));
             //api.RegisterEntity("EntityVehicle", typeof(EntityVehicle));
@@ -41,6 +42,31 @@ namespace kosphotography
             { 
                 sapi.World.Logger.StoryEvent("kosFireMod loaded");
             }*/
+
+            //Check for Existing Config file, create one if none exists
+            try
+            {
+                var Config = api.LoadModConfig<KosPhotographyConfig>("kosphotography.json");
+                if (Config != null)
+                {
+                    api.Logger.Notification("Mod Config successfully loaded.");
+                    KosPhotographyConfig.Current = Config;
+                }
+                else
+                {
+                    api.Logger.Notification("No Mod Config specified. Falling back to default settings");
+                    KosPhotographyConfig.Current = KosPhotographyConfig.GetDefault();
+                }
+            }
+            catch
+            {
+                KosPhotographyConfig.Current = KosPhotographyConfig.GetDefault();
+                api.Logger.Error("Failed to load custom mod configuration. Falling back to default settings!");
+            }
+            finally
+            {
+                api.StoreModConfig(KosPhotographyConfig.Current, "kosphotography.json");
+            }
         }
     }
 }

@@ -6,6 +6,7 @@
   "attributes": {
     "displaycaseable": true,
     "shelvable": true,
+    "isCamera": true,
     "groundStorageTransform": {
       "translation": {
         "x": 0,
@@ -71,7 +72,7 @@
       "y": 180,
       "z": 0
     },
-    "scale": 2.8
+    "scale": 0
   },
   "tpHandTransform": {
     "translation": {

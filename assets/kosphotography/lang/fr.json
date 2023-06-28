@@ -1,0 +1,26 @@
+{
+  "item-camera": "Appareil photo",
+
+  "item-photograph": "Photographie",
+  "incontainer-item-photograph": "Photographie",
+  "game:incontainer-item-photograph": "Photographie",
+
+  "item-photographicpaper": "Papier photographique",
+  "incontainer-item-photographicpaper": "Papier photographique",
+  "game:incontainer-item-photographicpaper": "Papier photographique",
+
+  "item-saltedpaper": "Papier salé",
+  "incontainer-item-saltedpaper": "Papier salé",
+  "game:incontainer-item-saltedpaper": "Papier salé",
+
+  "game:heldhelp-takephoto": "Prendre une photo",
+
+  "block-photographframepainting-*": "Cadre photo",
+  "block-photographframestand-*": "Cadre photo (table)",
+  "block-photographframeborderless-*": "Cadre photo (sans bords)",
+
+  "item-silvernitrateportion": "Nitrate d'argent",
+  "incontainer-item-silvernitrateportion": "Nitrate d'argent",
+  "game:incontainer-item-silvernitrateportion": "Nitrate d'argent",
+  "itemdesc-silvernitrateportion": "AgNO<font size=\"10\">3</font>"
+}

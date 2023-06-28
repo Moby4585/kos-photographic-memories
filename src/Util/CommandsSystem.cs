@@ -51,7 +51,7 @@ namespace kosphotography
                 return TextCommandResult.Success("Ok, photograph name set to " + args[0].ToString());
             }
 
-            return TextCommandResult.Success("Error: item is not a photograph");
+            return TextCommandResult.Error("Error: item is not a photograph");
         }
     }
 }

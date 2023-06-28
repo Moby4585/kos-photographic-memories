@@ -1,0 +1,26 @@
+{
+  "item-camera": "Фотоапарат",
+
+  "item-photograph": "Фотографія",
+  "incontainer-item-photograph": "Фотографія",
+  "game:incontainer-item-photograph": "Фотографія",
+
+  "item-photographicpaper": "Фотопапір",
+  "incontainer-item-photographicpaper": "Фотопапір",
+  "game:incontainer-item-photographicpaper": "Фотопапір",
+
+  "item-saltedpaper": "Засолений папір",
+  "incontainer-item-saltedpaper": "Засолений папір",
+  "game:incontainer-item-saltedpaper": "Засолений парір",
+
+  "game:heldhelp-takephoto": "Візьмить фотографію",
+
+  "block-photographframepainting-*": "Фотокартка у рамці",
+  "block-photographframestand-*": "Настільна фотокартка у рамці",
+  "block-photographframeborderless-*": "Фотокартка",
+
+  "item-silvernitrateportion": "Нітрат срібла",
+  "incontainer-item-silvernitrateportion": "Нітрат срібла",
+  "game:incontainer-item-silvernitrateportion": "Нітрат срібла",
+  "itemdesc-silvernitrateportion": "AgNO<font size=\"10\">3</font>"
+}
