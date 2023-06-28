@@ -72,7 +72,8 @@
       "y": 180,
       "z": 0
     },
-    "scale": 0
+    "scale": 0,
+    "__comment": "former: 2.8"
   },
   "tpHandTransform": {
     "translation": {

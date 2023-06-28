@@ -20,6 +20,7 @@ namespace kosphotography
         CameraAimRenderer renderer;
 
         public static bool didJustSnapped = false;
+        public static bool isTakingPicture = false;
 
         public static bool settingsLoaded = false;
 
@@ -102,7 +103,7 @@ void main () {
     vec4 color = texture2D(colorTexture, uv);
 
     if (uv[0] * xs < (xs/2) - (ys/2) - 2 || uv[0] * xs > (xs/2) + (ys/2) + 2) {
-        color = color * 0.5;
+        color = color * 0.2;
     }
 
     outColor = (isWhite == 1) ? vec4(1, 1, 1, 1) : color;
@@ -149,6 +150,7 @@ void main () {
         {
             ItemStack stack = capi.World.Player.InventoryManager.ActiveHotbarSlot.Itemstack;
             if (stack == null || (!(stack?.Collectible?.Attributes?.IsTrue("isCamera") ?? false))) return;
+            //if (!ShaderSysMod.isTakingPicture) return;
 
 
             IShaderProgram curShader = capi.Render.CurrentActiveShader;
@@ -160,6 +162,7 @@ void main () {
             //IServerPlayer splayer;
 
             overlayShaderProg.Uniform("isWhite", ShaderSysMod.didJustSnapped ? 1 : 0);
+            //overlayShaderProg.Uniform("isWhite", 0);
 
             overlayShaderProg.Uniform("xs", (float)capi.Render.FrameWidth);
             overlayShaderProg.Uniform("ys", (float)capi.Render.FrameHeight);
@@ -174,7 +177,11 @@ void main () {
 
             curShader?.Use();
 
-            ShaderSysMod.didJustSnapped = false;
+            if (ShaderSysMod.didJustSnapped)
+            {
+                ShaderSysMod.didJustSnapped = false;
+                ShaderSysMod.isTakingPicture = false;
+            }
         }
     }
 }

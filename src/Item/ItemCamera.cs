@@ -36,26 +36,29 @@ namespace kosphotography
 
         public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
-            base.OnHeldInteractStop(secondsUsed, slot, byEntity, blockSel, entitySel);
+            //base.OnHeldInteractStop(secondsUsed, slot, byEntity, blockSel, entitySel);
 
-            IPlayer player = (byEntity as EntityPlayer).Player;
+            ShaderSysMod.didJustSnapped = true;
 
-            if (player != null)
-            {
-                ShaderSysMod.didJustSnapped = true;
-            }
             return;
+        }
+
+        public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
+        {
+            return true;
         }
 
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
             //base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling);
 
-            IPlayer player = (byEntity as EntityPlayer).Player;
-
             //if (byEntity.Controls.Sneak) return;
 
             handling = EnumHandHandling.PreventDefault;
+
+            ShaderSysMod.isTakingPicture = true;
+
+            IPlayer player = (byEntity as EntityPlayer).Player;
 
             if (player != null)
             {
@@ -72,7 +75,6 @@ namespace kosphotography
                     {
 
                         capi.ShowChatMessage("[Photography] Photograph taken!");
-                        
 
                         PhotoBitmap bitmap = new PhotoBitmap();
 
@@ -90,8 +92,16 @@ namespace kosphotography
                     }
                 }
             }
+        }
 
-            return;
+        public override void OnHeldRenderOpaque(ItemSlot inSlot, IClientPlayer byPlayer)
+        {
+            if (!ShaderSysMod.isTakingPicture) base.OnHeldRenderOpaque(inSlot, byPlayer);
+        }
+
+        public override void OnHeldRenderOit(ItemSlot inSlot, IClientPlayer byPlayer)
+        {
+            if (!ShaderSysMod.isTakingPicture) base.OnHeldRenderOpaque(inSlot, byPlayer);
         }
 
         public override WorldInteraction[] GetHeldInteractionHelp(ItemSlot inSlot)
