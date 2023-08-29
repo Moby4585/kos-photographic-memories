@@ -54,11 +54,18 @@ namespace kosphotography
 
             //if (byEntity.Controls.Sneak) return;
 
+            IPlayer player = (byEntity as EntityPlayer).Player;
+
+            ItemStack offHandStack = player?.InventoryManager.GetHotbarInventory()[10].Itemstack;
+            if (offHandStack == null || !((offHandStack?.Collectible?.Code?.ToString() ?? "") == "kosphotography:photographicpaper"))
+            {
+                base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling);
+                return;
+            }
+
             handling = EnumHandHandling.PreventDefault;
 
             ShaderSysMod.isTakingPicture = true;
-
-            IPlayer player = (byEntity as EntityPlayer).Player;
 
             if (player != null)
             {

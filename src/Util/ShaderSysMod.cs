@@ -150,6 +150,8 @@ void main () {
         {
             ItemStack stack = capi.World.Player.InventoryManager.ActiveHotbarSlot.Itemstack;
             if (stack == null || (!(stack?.Collectible?.Attributes?.IsTrue("isCamera") ?? false))) return;
+            ItemStack offHandStack = capi.World.Player.InventoryManager.GetHotbarInventory()[10].Itemstack;
+            if ((offHandStack == null || !((offHandStack?.Collectible?.Code?.ToString() ?? "") == "kosphotography:photographicpaper")) && !ShaderSysMod.isTakingPicture) return;
             //if (!ShaderSysMod.isTakingPicture) return;
 
 
